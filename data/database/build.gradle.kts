@@ -4,13 +4,13 @@ plugins {
     id(BuildPlugins.kapt)
 }
 
-//apply {
+// apply {
 //    apply(from = "../jacoco.gradle")
-//}
+// }
 
 android {
     compileSdk = AndroidSdk.compileSdkVersion
-    buildToolsVersion =AndroidSdk.buildVersionTool
+    buildToolsVersion = AndroidSdk.buildVersionTool
 
     defaultConfig {
         minSdk = AndroidSdk.minSdkVersion

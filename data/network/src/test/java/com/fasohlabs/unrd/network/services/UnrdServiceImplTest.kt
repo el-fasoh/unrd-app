@@ -2,8 +2,6 @@ package com.fasohlabs.unrd.network.services
 
 import com.fasoh.unrd.api.UnrdApi
 import com.fasoh.unrd.services.UnrdServiceImpl
-import com.fasohlabs.unrd.domain.models.ApiResponseData
-import com.fasohlabs.unrd.domain.models.ApiResult
 import com.fasohlabs.unrd.domain.sercives.UnrdService
 import com.fasohlabs.unrd.domain.utils.UnrdRequest
 import com.fasohlabs.unrd.network.enqueueResponse
@@ -11,7 +9,6 @@ import kotlinx.coroutines.runBlocking
 import okhttp3.mockwebserver.MockWebServer
 import org.junit.After
 import org.junit.Test
-import org.mockito.kotlin.mock
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.net.HttpURLConnection

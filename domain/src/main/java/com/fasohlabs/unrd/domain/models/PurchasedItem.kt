@@ -1,6 +1,5 @@
 package com.fasohlabs.unrd.domain.models
 
-
 import com.google.gson.annotations.SerializedName
 
 data class PurchasedItem(

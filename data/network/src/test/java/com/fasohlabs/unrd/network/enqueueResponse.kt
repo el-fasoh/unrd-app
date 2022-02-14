@@ -19,7 +19,7 @@ internal fun MockWebServer.enqueueResponse(fileName: String? = null, code: Int) 
                     .setBody(source.readString(StandardCharsets.UTF_8))
             )
         }
-    }?: run {
+    } ?: run {
         enqueue(MockResponse().setResponseCode(code))
     }
 }

@@ -32,7 +32,7 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    internal fun provideUnrdApi( retrofit: Retrofit): UnrdApi =
+    internal fun provideUnrdApi(retrofit: Retrofit): UnrdApi =
         retrofit.create(UnrdApi::class.java)
 
     @Singleton
