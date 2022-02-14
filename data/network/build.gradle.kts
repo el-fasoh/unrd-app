@@ -83,5 +83,6 @@ dependencies {
     testImplementation(TestLibraries.mockitoKotlin)
     testImplementation(TestLibraries.coroutineTest)
     testImplementation(TestLibraries.mockWebServer)
+    testImplementation(TestLibraries.truth)
 
 }

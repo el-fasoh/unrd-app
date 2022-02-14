@@ -37,6 +37,8 @@ object Versions {
 
     const val retrofit = "2.9.0"
     const val okhttp = "4.9.1"
+
+    const val truth = "1.0.1"
 }
 
 object BuildPlugins {
@@ -114,6 +116,7 @@ object TestLibraries {
     const val mockitoKotlin = "org.mockito.kotlin:mockito-kotlin:${Versions.mockitoKotlin}"
     const val mockito = "org.mockito:mockito-core:${Versions.mockito}"
     const val mockWebServer = "com.squareup.okhttp3:mockwebserver:${Versions.okhttp}"
+    const val truth = "com.google.truth:truth:${Versions.truth}"
 }
 
 

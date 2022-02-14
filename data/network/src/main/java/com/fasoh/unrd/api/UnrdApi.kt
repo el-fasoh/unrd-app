@@ -7,6 +7,6 @@ import retrofit2.http.GET
 
 interface UnrdApi {
 
-    @GET("/resp.json")
+    @GET("resp.json")
     suspend fun fetchStory(): Response<ApiResponseData>
 }
