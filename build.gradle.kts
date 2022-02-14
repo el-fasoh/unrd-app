@@ -19,7 +19,6 @@ allprojects {
     }
 
     apply(plugin = BuildPlugins.dokkaPlugin)
-
     apply(plugin = BuildPlugins.ktlintPlugin)
     ktlint {
         android.set(true)
@@ -32,9 +31,11 @@ allprojects {
 
 buildscript {
     val jacocoVersion by extra("0.2")
+    val hiltVersion by extra("2.38.1")
 
     dependencies {
         classpath("com.hiya:jacoco-android:$jacocoVersion")
+        classpath("com.google.dagger:hilt-android-gradle-plugin:$hiltVersion")
     }
 }
 

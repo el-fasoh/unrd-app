@@ -9,15 +9,15 @@ plugins {
 //}
 
 android {
-    compileSdkVersion(AndroidSdk.compileSdkVersion)
-    buildToolsVersion(AndroidSdk.buildVersionTool)
+    compileSdk = AndroidSdk.compileSdkVersion
+    buildToolsVersion =AndroidSdk.buildVersionTool
 
     defaultConfig {
-        minSdkVersion(AndroidSdk.minSdkVersion)
-        targetSdkVersion(AndroidSdk.targetSdkVersion)
+        minSdk = AndroidSdk.minSdkVersion
+        targetSdk = AndroidSdk.targetSdkVersion
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        testInstrumentationRunnerArgument("clearPackageData", "true")
+        testInstrumentationRunnerArguments["clearPackageData"] = "true"
     }
 
     testOptions {
@@ -64,5 +64,4 @@ dependencies {
 
     implementation(Libraries.dagger)
     kapt(Libraries.daggerCompiler)
-
 }

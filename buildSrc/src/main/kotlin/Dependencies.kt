@@ -13,7 +13,7 @@ object Versions {
     const val espresso = "3.5.0-alpha03"
     const val annotation = "1.3.0"
     const val androidxJUnit = "1.1.2"
-    const val mockitoKotlin = "2.2.0"
+    const val mockitoKotlin = "4.0.0"
     const val mockito = "3.7.7"
 
     // Gradle Plugins
@@ -25,8 +25,7 @@ object Versions {
     const val jacoco = "0.8.7"
 
     const val roomVersion = "2.2.6"
-    const val hiltDagger = "2.31.2-alpha"
-    const val hilt = "1.0.0-alpha03"
+    const val hiltDagger = "2.38.1"
 
     const val activityKtx = "1.1.0"
     const val liveData = "2.2.0"
@@ -35,6 +34,9 @@ object Versions {
 
     const val coroutines = "1.3.9"
     const val coil = "1.1.1"
+
+    const val retrofit = "2.9.0"
+    const val okhttp = "4.9.1"
 }
 
 object BuildPlugins {
@@ -59,7 +61,6 @@ object BuildPlugins {
 
 object Libraries {
     //Any Library is added here
-    const val kotlinStandardLibrary = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
     const val constraintLayout =
         "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
@@ -74,8 +75,8 @@ object Libraries {
     //hilt
     const val dagger = "com.google.dagger:hilt-android:${Versions.hiltDagger}"
     const val daggerCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hiltDagger}"
-    const val hiltViewModel = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.hilt}"
-    const val hiltCompiler = "androidx.hilt:hilt-compiler:${Versions.hilt}"
+    const val hiltViewModel = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.hiltDagger}"
+    const val hiltCompiler = "androidx.hilt:hilt-compiler:${Versions.hiltDagger}"
 
     //lifecycle
     const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.liveData}"
@@ -86,6 +87,18 @@ object Libraries {
     //coroutines
     const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
     const val coil = "io.coil-kt:coil:${Versions.coil}"
+
+    //
+    const val gson = "com.google.code.gson:gson:2.9.0"
+
+
+    //Network
+    const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+    const val gsonConverter = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
+
+    //OkHttp
+    const val okhttp = "com.squareup.okhttp3:okhttp:${Versions.okhttp}"
+    const val okhttpLogger = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp}"
 
 }
 
@@ -98,8 +111,9 @@ object TestLibraries {
 
     const val coroutineTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutines}"
     const val androidxJunit = "androidx.test.ext:junit:${Versions.androidxJUnit}"
-    const val mockitoKotlin = "com.nhaarman.mockitokotlin2:mockito-kotlin:${Versions.mockitoKotlin}"
+    const val mockitoKotlin = "org.mockito.kotlin:mockito-kotlin:${Versions.mockitoKotlin}"
     const val mockito = "org.mockito:mockito-core:${Versions.mockito}"
+    const val mockWebServer = "com.squareup.okhttp3:mockwebserver:${Versions.okhttp}"
 }
 
 

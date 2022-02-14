@@ -4,6 +4,7 @@ plugins {
     id(BuildPlugins.kotlinParcelizePlugin)
     id(BuildPlugins.ktlintPlugin)
     id(BuildPlugins.jacocoAndroid)
+    id(BuildPlugins.kapt)
 }
 
 jacoco {
@@ -17,7 +18,7 @@ android {
     android.buildFeatures.viewBinding = true
 
     defaultConfig {
-        applicationId = "com.fasohlabs.homie"
+        applicationId = "com.fasohlabs.unrd"
         minSdk = AndroidSdk.minSdkVersion
         targetSdk = AndroidSdk.targetSdkVersion
         versionCode = AndroidSdk.versionCode
@@ -55,6 +56,9 @@ android {
         implementation(Libraries.ktxCore)
         implementation(Libraries.constraintLayout)
         implementation(Libraries.materialComponents)
+
+        implementation(Libraries.dagger)
+        kapt(Libraries.daggerCompiler)
 
         androidTestImplementation(TestLibraries.testRunner)
         androidTestImplementation(TestLibraries.espresso)

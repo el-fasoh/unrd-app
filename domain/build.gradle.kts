@@ -15,6 +15,7 @@ java {
 
 dependencies {
     implementation(Libraries.coroutines)
+    implementation(Libraries.gson)
 
     testImplementation(TestLibraries.mockitoKotlin)
     testImplementation(TestLibraries.mockito)
