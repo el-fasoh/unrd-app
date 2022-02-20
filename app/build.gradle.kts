@@ -24,7 +24,7 @@ android {
         targetSdk = AndroidSdk.targetSdkVersion
         versionCode = AndroidSdk.versionCode
         versionName = AndroidSdk.versionName
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "com.fasohlabs.unrd.runner.MockTestRunner"
     }
 
     buildFeatures {
