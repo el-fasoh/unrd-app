@@ -34,6 +34,8 @@ object Versions {
 
     const val retrofit = "2.9.0"
     const val okhttp = "4.9.1"
+    const val kakao = "2.3.4"
+    const val mockK = "1.10.0"
 }
 
 object BuildPlugins {
@@ -114,6 +116,7 @@ object TestLibraries {
     const val junit4 = "junit:junit:${Versions.junit4}"
     const val androidJUnit = "androidx.test.ext:junit:1.1.3"
     const val testRunner = "androidx.test:runner:${Versions.testRunner}"
+    const val testRules =  "androidx.test:rules:${Versions.testRunner}"
     const val espresso = "androidx.test.espresso:espresso-core:${Versions.espresso}"
     const val annotation = "androidx.annotation:annotation:${Versions.annotation}"
     const val testCore = "androidx.test:core:1.4.0"
@@ -124,6 +127,8 @@ object TestLibraries {
     const val archCore = "androidx.arch.core:core-testing:2.1.0"
     const val turbine = "app.cash.turbine:turbine:0.6.1"
     const val robolectric ="org.robolectric:robolectric:4.7"
+    const val androidMockK = "io.mockk:mockk-android:${Versions.mockK}"
+    const val kakao = "com.agoda.kakao:kakao:${Versions.kakao}"
 }
 
 

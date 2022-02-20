@@ -83,6 +83,10 @@ android {
         androidTestImplementation(TestLibraries.testRunner)
         androidTestImplementation(TestLibraries.espresso)
         androidTestImplementation(TestLibraries.annotation)
+        androidTestImplementation(TestLibraries.testRules)
+        androidTestImplementation(TestLibraries.androidJUnit)
+        androidTestImplementation(TestLibraries.testCore)
+        androidTestImplementation(TestLibraries.androidMockK)
 
         testImplementation(TestLibraries.junit4)
         testImplementation(TestLibraries.mockitoKotlin)
