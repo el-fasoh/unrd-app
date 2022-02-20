@@ -27,7 +27,11 @@ To check test coverage:
         * [Dokka](https://github.com/Kotlin/dokka) - a documentation engine for Kotlin, performing the same function as javadoc for Java.
         * [jacoco](https://github.com/jacoco/jacoco) - a Code Coverage Library.
         * [Gradle Versions](https://github.com/ben-manes/gradle-versions-plugin) - provides a task to determine which dependencies have updates. Additionally, the plugin checks for updates to Gradle itself.
-        
+    
+## CI
+Code quality checks are run using github action and
+
 ## Debt
 * UI Test
 * Aggregating test coverage report for all the modules
+* Exclude dagger and databinding files from test coverage

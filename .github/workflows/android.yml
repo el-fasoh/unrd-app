@@ -20,4 +20,4 @@ jobs:
     - name: Code quality checks
       run: ./gradlew ktlintCheck && ./gradlew detekt
     - name: Build with Gradle
-      run: ./gradlew build
+      run: ./coverage.sh
