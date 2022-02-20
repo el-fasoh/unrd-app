@@ -87,6 +87,7 @@ android {
         androidTestImplementation(TestLibraries.androidJUnit)
         androidTestImplementation(TestLibraries.testCore)
         androidTestImplementation(TestLibraries.androidMockK)
+        androidTestImplementation(TestLibraries.kakao)
 
         testImplementation(TestLibraries.junit4)
         testImplementation(TestLibraries.mockitoKotlin)
