@@ -7,7 +7,7 @@ pluginManagement {
 
     plugins {
         id("com.android.application") version "7.0.3"
-        id("org.jetbrains.kotlin.android") version "1.6.0"
+        id("org.jetbrains.kotlin.android") version "1.6.10"
         id("com.android.library") version "7.0.3"
         id("com.google.firebase.crashlytics") version "2.1.0"
     }
@@ -21,7 +21,7 @@ pluginManagement {
         }
     }
 }
-rootProject.name = "GradlePlugins"
+rootProject.name = "Unrd"
 
 include("app")
 include(":data:database")

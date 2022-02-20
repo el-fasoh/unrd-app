@@ -2,7 +2,7 @@ object Versions {
 
     //Version codes for all the libraries
     const val kotlin = "1.6.0"
-    const val appCompat = "1.4.0-rc01"
+    const val appCompat = "1.4.1"
     const val constraintLayout = "2.1.1"
     const val ktx = "1.7.0"
     const val material = "1.5.0-beta01"
@@ -14,7 +14,7 @@ object Versions {
     const val annotation = "1.3.0"
     const val androidxJUnit = "1.1.2"
     const val mockitoKotlin = "4.0.0"
-    const val mockito = "3.7.7"
+    const val mockito = "4.3.1"
 
     // Gradle Plugins
     const val ktlint = "10.2.0"
@@ -24,11 +24,8 @@ object Versions {
     const val gradleVersionsPlugin = "0.39.0"
     const val jacoco = "0.8.7"
 
-    const val roomVersion = "2.2.6"
+    const val roomVersion = "2.4.1"
     const val hiltDagger = "2.38.1"
-
-    const val activityKtx = "1.1.0"
-    const val liveData = "2.2.0"
 
     const val timber = "4.7.1"
 
@@ -60,6 +57,7 @@ object BuildPlugins {
 }
 
 object Libraries {
+
     //Any Library is added here
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
     const val constraintLayout =
@@ -79,18 +77,16 @@ object Libraries {
     const val hiltCompiler = "androidx.hilt:hilt-compiler:${Versions.hiltDagger}"
 
     //lifecycle
-    const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.liveData}"
-    const val activityKtx = "androidx.activity:activity-ktx:${Versions.activityKtx}"
+    const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:2.4.1"
+    const val activityKtx = "androidx.activity:activity-ktx:1.4.0"
 
     const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
 
     //coroutines
     const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
-    const val coil = "io.coil-kt:coil:${Versions.coil}"
 
     //
     const val gson = "com.google.code.gson:gson:2.9.0"
-
 
     //Network
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
@@ -100,20 +96,34 @@ object Libraries {
     const val okhttp = "com.squareup.okhttp3:okhttp:${Versions.okhttp}"
     const val okhttpLogger = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp}"
 
+    //Exoplayer
+    private const val exoplayerVersion = "2.16.1"
+    const val exoplayerCore = "com.google.android.exoplayer:exoplayer-core:$exoplayerVersion"
+    const val exoplayerDash = "com.google.android.exoplayer:exoplayer-dash:$exoplayerVersion"
+    const val exoplayerUi = "com.google.android.exoplayer:exoplayer-ui:$exoplayerVersion"
+
+    //Glide
+    private const val glideVersion = "4.13.0"
+    const val glide = "com.github.bumptech.glide:glide:$glideVersion"
+    const val glideCompiler = "com.github.bumptech.glide:compiler:$glideVersion"
+
+    const val shimmer = "com.facebook.shimmer:shimmer:0.5.0"
 }
 
 object TestLibraries {
-    //any test library is added here
     const val junit4 = "junit:junit:${Versions.junit4}"
+    const val androidJUnit = "androidx.test.ext:junit:1.1.3"
     const val testRunner = "androidx.test:runner:${Versions.testRunner}"
     const val espresso = "androidx.test.espresso:espresso-core:${Versions.espresso}"
     const val annotation = "androidx.annotation:annotation:${Versions.annotation}"
-
+    const val testCore = "androidx.test:core:1.4.0"
     const val coroutineTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutines}"
-    const val androidxJunit = "androidx.test.ext:junit:${Versions.androidxJUnit}"
     const val mockitoKotlin = "org.mockito.kotlin:mockito-kotlin:${Versions.mockitoKotlin}"
     const val mockito = "org.mockito:mockito-core:${Versions.mockito}"
     const val mockWebServer = "com.squareup.okhttp3:mockwebserver:${Versions.okhttp}"
+    const val archCore = "androidx.arch.core:core-testing:2.1.0"
+    const val turbine = "app.cash.turbine:turbine:0.6.1"
+    const val robolectric ="org.robolectric:robolectric:4.7"
 }
 
 

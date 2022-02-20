@@ -2,15 +2,12 @@ plugins {
     id(BuildPlugins.androidLibrary)
     id(BuildPlugins.kotlinAndroid)
     id(BuildPlugins.kapt)
+    id(BuildPlugins.jacocoAndroid)
 }
-
-//apply {
-//    apply(from = "../jacoco.gradle")
-//}
 
 android {
     compileSdk = AndroidSdk.compileSdkVersion
-    buildToolsVersion =AndroidSdk.buildVersionTool
+    buildToolsVersion = AndroidSdk.buildVersionTool
 
     defaultConfig {
         minSdk = AndroidSdk.minSdkVersion
@@ -31,18 +28,18 @@ android {
         getByName("debug") {
             isTestCoverageEnabled = false
             buildConfigField("String", "BASE_URL", "\"https://s3-eu-west-1.amazonaws.com/unrd-scratch/\"")
-            buildConfigField("long","HOST_READ_TIMEOUT", "60")
-            buildConfigField("long","HOST_CONNECT_TIMEOUT", "60")
+            buildConfigField("long", "HOST_READ_TIMEOUT", "60")
+            buildConfigField("long", "HOST_CONNECT_TIMEOUT", "60")
         }
 
         getByName("release") {
             isMinifyEnabled = true
             buildConfigField("String", "BASE_URL", "\"https://s3-eu-west-1.amazonaws.com/unrd-scratch/\"")
-            buildConfigField("long","HOST_READ_TIMEOUT", "60")
-            buildConfigField("long","HOST_CONNECT_TIMEOUT", "60")
+            buildConfigField("long", "HOST_READ_TIMEOUT", "60")
+            buildConfigField("long", "HOST_CONNECT_TIMEOUT", "60")
             proguardFiles(
-                    getDefaultProguardFile("proguard-android-optimize.txt"),
-                    "proguard-rules.pro"
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
             )
         }
     }
@@ -63,17 +60,13 @@ android {
 
 dependencies {
     implementation(project(":domain"))
-
-    implementation(Libraries.ktxCore)
-    implementation(Libraries.coroutines)
+    implementation(project(":core"))
 
     implementation(Libraries.okhttp)
     implementation(Libraries.okhttpLogger)
 
     implementation(Libraries.retrofit)
     implementation(Libraries.gsonConverter)
-
-    implementation(Libraries.timber)
 
     implementation(Libraries.dagger)
     kapt(Libraries.daggerCompiler)
@@ -83,5 +76,4 @@ dependencies {
     testImplementation(TestLibraries.mockitoKotlin)
     testImplementation(TestLibraries.coroutineTest)
     testImplementation(TestLibraries.mockWebServer)
-
 }

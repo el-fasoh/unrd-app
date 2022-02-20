@@ -6,7 +6,7 @@ plugins {
 
 android {
     compileSdk = AndroidSdk.compileSdkVersion
-    buildToolsVersion =AndroidSdk.buildVersionTool
+    buildToolsVersion = AndroidSdk.buildVersionTool
 
     defaultConfig {
         minSdk = AndroidSdk.minSdkVersion
@@ -44,11 +44,6 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_11.toString()
     }
-
-    packagingOptions {
-        exclude("META-INF/AL2.0")
-        exclude("META-INF/LGPL2.1")
-    }
 }
 
 dependencies {
@@ -56,4 +51,6 @@ dependencies {
 
     api(Libraries.timber)
     api(Libraries.coroutines)
+
+    testImplementation(TestLibraries.junit4)
 }

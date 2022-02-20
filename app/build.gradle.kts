@@ -5,6 +5,7 @@ plugins {
     id(BuildPlugins.ktlintPlugin)
     id(BuildPlugins.jacocoAndroid)
     id(BuildPlugins.kapt)
+    id(BuildPlugins.daggerHilt)
 }
 
 jacoco {
@@ -24,6 +25,10 @@ android {
         versionCode = AndroidSdk.versionCode
         versionName = AndroidSdk.versionName
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 
     testOptions {
@@ -51,9 +56,24 @@ android {
     }
 
     dependencies {
-        implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+        implementation(project(":domain"))
+        implementation(project(":core"))
+        implementation(project(":data:database"))
+        implementation(project(":data:network"))
+
+        implementation(Libraries.activityKtx)
+        implementation(Libraries.liveData)
+
+        implementation(Libraries.exoplayerCore)
+        implementation(Libraries.exoplayerDash)
+        implementation(Libraries.exoplayerUi)
+
+        implementation(Libraries.glide)
+        kapt(Libraries.glideCompiler)
+
+        implementation(Libraries.shimmer)
+
         implementation(Libraries.appCompat)
-        implementation(Libraries.ktxCore)
         implementation(Libraries.constraintLayout)
         implementation(Libraries.materialComponents)
 
@@ -65,5 +85,9 @@ android {
         androidTestImplementation(TestLibraries.annotation)
 
         testImplementation(TestLibraries.junit4)
+        testImplementation(TestLibraries.mockitoKotlin)
+        testImplementation(TestLibraries.mockito)
+        testImplementation(TestLibraries.junit4)
+        testImplementation(TestLibraries.archCore)
     }
 }

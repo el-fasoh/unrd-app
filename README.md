@@ -1,28 +1,20 @@
-# GradleBuildPlugins
+# Unrd
 
-👀 Sample project that shows you how to configure plugins. After generating the project from this template, remember to customize detekt rules and spotless plugin if needed:
-
-- To customize detekt rules, edit the detekt.yml on your root directory
-
-- Inside the spotless folder, on your root directory - add your license file
-
-- Remember to refactor the package name :rocket:
+This is a test implementation for Unrd test API. 
 
 ### Prerequisites
 
 Before every commit, make sure you run the following command:
 
 ```shell script
-./codeAnalysis
+./codeAnalysis.sh
 ```
 
-To check for dependency updates, run the following command:
+To check test coverage:
 
 ```shell script
-./gradlew dependencyUpdate
+./gradlew coverage.sh
 ```
-
-Refer to this [issue](https://github.com/gradle/gradle/issues/10248), if you get any issues running the lint commands on the terminal :rocket:
 
 ## Tech-stack
 
@@ -36,4 +28,6 @@ Refer to this [issue](https://github.com/gradle/gradle/issues/10248), if you get
         * [jacoco](https://github.com/jacoco/jacoco) - a Code Coverage Library.
         * [Gradle Versions](https://github.com/ben-manes/gradle-versions-plugin) - provides a task to determine which dependencies have updates. Additionally, the plugin checks for updates to Gradle itself.
         
-For reference, here's a detailed explanation of the approach of the plugin configuration in this project - [A Day with an Elephant in the Room: Configuring Gradle Plugins.](https://medium.com/@harunwangereka/a-day-with-an-elephant-in-the-room-configuring-gradle-plugins-3331b0be64c7)
+## Debt
+* UI Test
+* Aggregating test coverage report for all the modules

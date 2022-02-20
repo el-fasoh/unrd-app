@@ -2,15 +2,12 @@ plugins {
     id(BuildPlugins.androidLibrary)
     id(BuildPlugins.kotlinAndroid)
     id(BuildPlugins.kapt)
+    id(BuildPlugins.jacocoAndroid)
 }
-
-//apply {
-//    apply(from = "../jacoco.gradle")
-//}
 
 android {
     compileSdk = AndroidSdk.compileSdkVersion
-    buildToolsVersion =AndroidSdk.buildVersionTool
+    buildToolsVersion = AndroidSdk.buildVersionTool
 
     defaultConfig {
         minSdk = AndroidSdk.minSdkVersion
@@ -56,6 +53,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":domain"))
+    implementation(project(":core"))
     implementation(Libraries.ktxCore)
 
     implementation(Libraries.roomKtx)
@@ -64,4 +63,13 @@ dependencies {
 
     implementation(Libraries.dagger)
     kapt(Libraries.daggerCompiler)
+
+    testImplementation(TestLibraries.junit4)
+    testImplementation(TestLibraries.coroutineTest)
+    testImplementation(TestLibraries.mockitoKotlin)
+    testImplementation(TestLibraries.mockito)
+    testImplementation(TestLibraries.androidJUnit)
+    testImplementation(TestLibraries.turbine)
+    testImplementation(TestLibraries.robolectric)
+    testImplementation(TestLibraries.testCore)
 }
